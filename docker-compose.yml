@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+	node:
+	    build: node
+        ports:
+	        - "80:80"          
+	    volumes:
+	        - ./www:/var/www/html
+	        - ./tests:/var/www/html/test
+	db:
+	    build: mysql
+	    ports:
+		    - "3306:3306"
+	  
