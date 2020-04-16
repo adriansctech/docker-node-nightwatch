@@ -1,13 +1,10 @@
 version: "3.3"
 services:
-    web:
-        build: apache
-        ports:
-            - "80:80"          
-        volumes:
-            - ./www:/var/www/html
-            - ./tests:/var/www/html/tests
     db:
         build: mysql
         ports:
-            - "3306:3306"    
+            - "3306:3306"
+        volumes:            
+            - ./tests:/home/tests
+            - ./tests_output:/home/tests_output
+            - ./reports:/home/reports

@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose exec web bash
+docker-compose exec db bash
